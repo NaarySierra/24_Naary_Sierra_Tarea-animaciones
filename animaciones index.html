@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-image: url("https://images.pexels.com/photos/6501751/pexels-photo-6501751.jpeg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .luna {
+      position: absolute;
+      top: 50px;
+      right: 50px;
+
+      width: 250px;
+      height: 250px;
+
+      border-radius: 50%;
+
+      background-image: url("https://i.pinimg.com/736x/e7/5e/75/e75e75c7c1d0afe89514cc1bc19c8d99.jpg");
+      background-size: 140%;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      box-shadow: 0 0 25px rgba(255,255,255,0.6);
+
+      animation: pulsoLuna 3s ease-in-out 1 forwards;
+}
+.estrella-fugaz {
+  position: absolute;
+
+  width: 300px;
+  height: 3px;
+
+  background: linear-gradient(
+    to left,
+    white,
+    rgba(255,255,255,0)
+  );
+
+  transform: rotate(25deg);
+
+  opacity: 0;
+
+  animation: fugaz 4s linear infinite;
+}
+
+.e1 { top: 10px; animation-delay: 0s; }
+.e2 { top: 250px; animation-delay: 1s; }
+.e3 { top: 400px; animation-delay: 2s; }
+.e4 { top: 130px; animation-delay: 3s; }
+
+@keyframes fugaz {
+  0% {
+    left: -200px;
+    opacity: 0;
+    transform: rotate(25deg);
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 120%;
+    top: 100vh;
+    opacity: 0;
+  }
+}
+
+
+@keyframes pulsoLuna {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="luna"></div>
+
+<div class="estrella-fugaz e1"></div>
+<div class="estrella-fugaz e2"></div>
+<div class="estrella-fugaz e3"></div>
+<div class="estrella-fugaz e4"></div>
+
+</body>
+</html>
+
